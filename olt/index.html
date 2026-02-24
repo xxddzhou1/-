@@ -110,26 +110,32 @@
             <div class="note">
                 <strong>💡 提示：</strong> 配置弱光告警时需要在PON模式下进行，x/x表示具体的端口号，请根据实际情况替换。
             </div>
-   <h3>ONU查看注册相关命令</h3>
+               <div class="container">
+        <div class="command-section">
+          <h3>ONU查看注册相关命令</h3>
             
             <div class="command-item">
                 <div style="color: #333; font-weight: bold;">查看OLT槽位注册ONU数量</div>
                 <div style="margin-top: 8px; color: #0066cc;">show running-config-interface gpon_olt-1/3/6</div>
-                <div class="command-description">// 查看OLT的1/3/6槽位注册ONU数量需要在config模式下</div>
+                <div class="command-description">// 查看OLT的1/3/6槽位注册ONU数量</div>
             </div>
             
             <div class="command-item">
                 <div style="color: #333; font-weight: bold;">查看注册ONU数据</div>
                 <div style="margin-top: 8px; color: #0066cc;">show running-config-interface gpon_onu-1/3/6:2</div>     
-                <div class="command-description">// 查看注册onu数据需要在config模式下</div>
+                <div class="command-description">// 查看注册onu数据</div>
             </div>
             
             <div class="command-item">
                 <div style="color: #333; font-weight: bold;">查看ONU下面PORT下发数据</div>
-                <div style="margin-top: 8px; color: #0066cc;">sho running-config-interface vport-1/3/6.2:1</div>
-                <div class="command-description">// 查看ONU下面PORT下发数据需要在config模式下</div>
+                <div style="margin-top: 8px; color: #0066cc;">show running-config-interface vport-1/3/6.2:1</div>
+                <div class="command-description">// 查看ONU下面PORT下发数据</div>
             </div>
-            
+              <div class="note">
+                <strong>💡 提示：</strong> ONU注册查看相关命令时需要在config模式下进行，x/x表示具体的端口号，请根据实际情况替换。
+            </div>
+               <div class="container">
+        <div class="command-section">
         </div>
     </div>
 </body>
