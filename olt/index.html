@@ -85,8 +85,62 @@
         <a href="../" class="back-link">← 返回主页</a>
     </div>
     
-    <div class="container">
+ <div class="container">
         <div class="command-section">
+          <h2>OLT上联和PON相关查询命令</h2>
+
+          <div class="command-item">
+                <div style="color: #333; font-weight: bold;">查看上联聚合组配置</div>
+                <div style="margin-top: 8px; color: #0066cc;"> show running-config-interface smartgroup1</div>
+                <div class="command-description">// show lacp internal 用于查看上联端口聚合</div>
+           </div>   
+    
+           <div class="command-item">
+                <div style="color: #333; font-weight: bold;">查看上联口配置</div>
+                <div style="margin-top: 8px; color: #0066cc;">show running-config-interface xgei-1/19/1</div>
+                <div class="command-description">// 查看上联口数据包统计，判断有无流量</div>
+            </div>
+
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">查看上联口数据包统计</div>
+                <div style="margin-top: 8px; color: #0066cc;">show  interface xgei-1/19/1 </div>
+                <div class="command-description">// 查看上联口数据包统计，判断有无流量</div>
+            </div>
+           
+             <div class="command-item">
+                <div style="color: #333; font-weight: bold;">查看PON口下的MAC地址</div>
+                <div style="margin-top: 8px; color: #0066cc;">show mac gpon olt gpon-olt_1/12/1</div>
+                <div class="command-description">// 查看单个vlan mac地址学习，显示特定VLAN中的MAC地址，如show mac vlan 1101查询1101对应的mac</div>
+              </div>
+
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">查看PON口光模块信息</div>
+                <div style="margin-top: 8px; color: #0066cc;">show optical-module-info gpon_olt-1/2/1 </div>
+                <div class="command-description">//查看PON口光模块信息</div>
+            </div>
+           
+
+         <h2>光衰查询相关命令</h2>
+
+          <div class="command-item">
+                <div style="color: #333; font-weight: bold;">查看上联口1/19/1光功率</div>
+                <div style="margin-top: 8px; color: #0066cc;"> show optical-module-info xgei-1/19/1</div>
+                <div class="command-description">// 查看上联口的光衰</div>
+           </div>   
+    
+           <div class="command-item">
+                <div style="color: #333; font-weight: bold;">查看整个PON下ONU侧收光</div>
+                <div style="margin-top: 8px; color: #0066cc;">show pon power onu-rx gpon_olt-1/2/1</div>
+                <div class="command-description">// 查看下行光衰，即整个PON下ONU侧收光</div>
+            </div>
+
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">查看单个ONU光功率详情</div>
+                <div style="margin-top: 8px; color: #0066cc;">show pon power attenuation gpon_onu-1/2/1:1  </div>
+                <div class="command-description">// 查看单个光猫onu侧和olt侧收光即上下行全程光衰</div>
+            </div>
+
+
             <h2>弱光检测相关命令</h2>
             
             <div class="command-item">
@@ -110,82 +164,6 @@
             <div class="note">
                 <strong>💡 提示：</strong> 配置弱光告警时需要在PON模式下进行，x/x表示具体的端口号，请根据实际情况替换。
             </div>
-
-            <h2>ONU注册与查看相关命令</h2>
-             
-            <div class="command-item">
-                <div style="color: #333; font-weight: bold;">查看未注册ONU信息</div>
-                <div style="margin-top: 8px; color: #0066cc;">show pon onu uncfg </div>
-                <div class="command-description">// 查看OLT中未注册ONU信息</div>
-            </div>
-             
-            <div class="command-item">
-                <div style="color: #333; font-weight: bold;">查看定位LOID在PON网络中的位置信息</div>
-                <div style="margin-top: 8px; color: #0066cc;">show gpon onu by loid XXXXXX </div>
-                <div class="command-description">// 通过光猫的LOID号XXXXX，可以查询到其在PON网络中的具体位置信息</div>
-            </div>
-             
-            <div class="command-item">
-                <div style="color: #333; font-weight: bold;">查看ONU上线记录及串码SN号</div>
-                <div style="margin-top: 8px; color: #0066cc;">show gpon  onu detail-info gpon_onu-1/2/1:1 </div>
-                <div class="command-description">// 查看ONU近10次的上线记录及串码SN号,故障查修判断时可能用到</div>
-            </div>
-             
-            <div class="command-item">
-                <div style="color: #333; font-weight: bold;">查看PON口配置</div>
-                <div style="margin-top: 8px; color: #0066cc;">show running-config-interface gpon_olt-1/3/6</div>
-                <div class="command-description">// 查看OLT的1/3/6槽位注册ONU数量</div>
-            </div>
-            
-            <div class="command-item">
-                <div style="color: #333; font-weight: bold;">查看ONU注册详情数据</div>
-                <div style="margin-top: 8px; color: #0066cc;">show running-config-interface gpon_onu-1/3/6:2</div>     
-                <div class="command-description">// 显示PON口下ONU的运行配置详情数据,深入了解ONU的网络配置情况</div>
-            </div>
-            
-            <div class="command-item">
-                <div style="color: #333; font-weight: bold;">查看ONU的VLAN配置数据</div>
-                <div style="margin-top: 8px; color: #0066cc;">show running-config-interface vport-1/3/6.2:1</div>
-                <div class="command-description">// 查看ONU业务流配置以及组播接收端口配置</div>
-            </div>
-            
-            <div class="command-item">
-                <div style="color: #333; font-weight: bold;">查看PON口下onu详细运行状态</div>
-                <div style="margin-top: 8px; color: #0066cc;">show gpon onu state gpon_olt-1/2/1</div>
-                <div class="command-description">// 查看PON口下onu详细运行状态</div>
-            </div>
-               <div class="note">
-                <strong>💡 提示：</strong> 注：参数“Phase State”可能有如下几种取值：
-               （1） offline，表示该 ONU 属于离线配置，OLT 没有搜索到这个 ONU；
-               （2） logging，表示该 ONU 已经搜索到，正在测距；
-               （3） syncMib，表示该 ONU 已经测距完毕，正在同步数据；
-               （4） working，表示 ONU 同步结束，可以进行其他配置；
-               （5） LOS，表示 ONU 和 OLT 之间的光纤链路有故障，导致 ONU 掉线；
-               （6） DyingGasp，表示 ONU 断电了，可能是 ONU 正常被关电，也可能是 ONU 所 在位置市电断了；
-              </div>
-
-
-  <h2>光衰查询相关命令</h2>
-
-          <div class="command-item">
-                <div style="color: #333; font-weight: bold;">查看上联口1/19/1光功率</div>
-                <div style="margin-top: 8px; color: #0066cc;"> show optical-module-info xgei-1/19/1</div>
-                <div class="command-description">// 查看上联口的光衰</div>
-           </div>   
-    
-           <div class="command-item">
-                <div style="color: #333; font-weight: bold;">查看整个PON下ONU侧收光</div>
-                <div style="margin-top: 8px; color: #0066cc;">show pon power onu-rx gpon_olt-1/2/1</div>
-                <div class="command-description">// 查看下行光衰，即整个PON下ONU侧收光</div>
-            </div>
-
-            <div class="command-item">
-                <div style="color: #333; font-weight: bold;">查看单个ONU光功率详情</div>
-                <div style="margin-top: 8px; color: #0066cc;">show pon power attenuation gpon_onu-1/2/1:1  </div>
-                <div class="command-description">// 查看单个光猫onu侧和olt侧收光即上下行全程光衰</div>
-            </div>
-
-
         </div>
     </div>
 </body>
