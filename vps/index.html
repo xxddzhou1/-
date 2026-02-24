@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPS专区</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background: linear-gradient(90deg, #FFD700 0%, #FF4500 100%);
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            color: white;
+            margin: 0;
+            font-size: 48px;
+            letter-spacing: 2px;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #FF4500;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #FFD700;
+            color: #FF4500;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .command-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .command-section h2 {
+            color: #FF4500;
+            border-bottom: 2px solid #FF4500;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .command-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #FF4500;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+        }
+        .command-description {
+            color: #666;
+            font-size: 14px;
+            margin-top: 8px;
+            font-family: Arial, sans-serif;
+        }
+        .note {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>VPS专区</h1>
+        <a href="../" class="back-link">← 返回主页</a>
+    </div>
+    
+ <div class="container">
+        <div class="command-section">
+         <h2>VPS专区</h2>
+             
+           <h2>端口的划分</h2>
 
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">80系端口</div>
+                <div style="margin-top: 8px; color: #0066cc;">80、8080、8880、2052、2082、2086、2095</div>
+                <div class="command-description">// 80系有7个端口</div>
+            </div>
+ 
+          <div class="command-item">
+                <div style="color: #333; font-weight: bold;">443系端口</div>
+                <div style="margin-top: 8px; color: #0066cc;">443、8443、2053、2083、2087、2096</div>
+                <div class="command-description">// 443系有6个端口</div>
+            </div>
+
+
+           <h2>套用CDN回源使用cloudflare</h2>
+            
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">小黄云官网</div>
+                <div style="margin-top: 8px; color: #0066cc;">https://www.cloudflare.com/zh-cn/</div>
+                <div class="command-description">// 用QQ邮箱注册的</div>
+            </div>
+            
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">美国地址生成器</div>
+                <div style="margin-top: 8px; color: #0066cc;">https://www.meiguodizhi.com/</div>
+                <div class="command-description">// 美国地址生成器</div>
+            </div>
+
+            
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">Vless-Xhttp-Reality-vision-enc协议</div>
+                <div style="margin-top: 8px; color: #0066cc;">xhpt="" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosbx/main/argosbx.sh)</div>
+                <div class="command-description">//  默认开启ENC加密</div>
+            </div>
+
+
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">固定隧道CDN优选</div>
+                <div style="margin-top: 8px; color: #0066cc;">vwpt="CF设置的URL端口" argo="vwpt" agn="解析的CF域名" agk="CF获取的token" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosbx/main/argosbx.sh)
+</div>
+                <div class="command-description">// Vless-ws-vision-enc-argo 必须填写端口(vmpt)、域名(agn)、token(agk)</div>
+            </div>
+            
+            <div class="note">
+                <strong>💡 提示：</strong> 注：固定隧道加CDN优选墙了也能用。
+            </div>
+
+
+
+           <h2>各类脚本按装</h2>
+
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">3X-UI面板</div>
+                <div style="margin-top: 8px; color: #0066cc;">bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)</div>
+                <div class="command-description">// 3X-UI面板</div>
+            </div>
+ 
+          <div class="command-item">
+                <div style="color: #333; font-weight: bold;">CF隧道安装脚本</div>
+                <div style="margin-top: 8px; color: #0066cc;">bash <(curl -Ls https://raw.githubusercontent.com/amclubs/am-serv00-vmess/main/install-argo.sh)</div>
+                <div class="command-description">// CF隧道安装脚本</div>
+            </div>
+
+
+          <div class="command-item">
+                <div style="color: #333; font-weight: bold;">检测BBR加速</div>
+                <div style="margin-top: 8px; color: #0066cc;">echo -e "\nnet.core.default_qdisc=fq\nnet.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf && sysctl -p && lsmod |grep bbr</div>
+                <div class="command-description">// 检测BBR加速也可以wget -O tcpx.sh "https://github.com/ylx2016/Linux-NetSpeed/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh</div>
+            </div>
+    </div>
+</body>
+</html>
