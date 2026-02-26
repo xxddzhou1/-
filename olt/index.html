@@ -112,7 +112,13 @@
                 <div style="margin-top: 8px; color: #0066cc;">show interface gpon_onu-1/X/X:X</div>
                 <div class="command-description">// 查看ONU数据包统计，判断有无流量</div>
             </div>
-           
+
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">查看某pon口下ONU离线统计</div>
+                <div style="margin-top: 8px; color: #0066cc;">show pon onu offline information gpon-olt_1/X/X:X</div>
+                <div class="command-description">// 查看离线次数，判断有无频繁上下线</div>
+            </div>
+            
             <div class="command-item">
                 <div style="color: #333; font-weight: bold;">查看PON口下的MAC地址</div>
                 <div style="margin-top: 8px; color: #0066cc;">show mac gpon olt gpon-olt_1/12/1</div>
@@ -145,6 +151,13 @@
                 <div class="command-description">// 查看单个光猫onu侧和olt侧收光即上下行全程光衰</div>
             </div>
 
+            
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">长发光ONU 的检测关闭</div>
+                <div style="margin-top: 8px; color: #0066cc;">rogue-onu-detect olt gpon_olt-1/X/X disable  </div>
+                <div class="command-description">// 需要在PON模式下面操作</div>
+            </div>
+            
             <h2>弱光检测相关命令</h2>
             
             <div class="command-item">
