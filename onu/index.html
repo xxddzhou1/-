@@ -131,6 +131,21 @@
             </div>
             
             <div class="command-item">
+                <div style="color: #333; font-weight: bold;">同OLT内，PON之间的业务割接场景很常见，涉及pon-copy命令</div>
+                <div style="margin-top: 8px; color: #0066cc;">1.设置源PON口模式为mode1</div>
+                 <div style="margin-top: 8px; color: #0066cc;">interface gpon_olt-1/2/1</div>
+                 <div style="margin-top: 8px; color: #0066cc;">resource-id-assign-mode mode1</div>
+                 <div style="margin-top: 8px; color: #0066cc;">2.退出config模式然后write保存下</div>
+                 <div style="margin-top: 8px; color: #0066cc;">3.执行pon-copy命令,在config模式下</div>
+                 <div style="margin-top: 8px; color: #0066cc;">pon-copy gpon olt interface gpon_olt-1/2/1 gpon_olt-1/2/8</div>
+                 <div style="margin-top: 8px; color: #0066cc;">4.设置目的PON口模式为mode2</div>
+                 <div style="margin-top: 8px; color: #0066cc;">interface gpon_olt-1/2/8</div>
+                 <div style="margin-top: 8px; color: #0066cc;">resource-id-assign-mode mode2</div>
+                 <div style="margin-top: 8px; color: #0066cc;">5.退出config模式然后write保存下</div>
+                 <div class="command-description">// 表示将1/2/1PON口下的所有业务数据copy到1/2/8PON口下面了</div>
+            </div>
+            
+            <div class="command-item">
                 <div style="color: #333; font-weight: bold;">查看PON口下onu详细运行状态</div>
                 <div style="margin-top: 8px; color: #0066cc;">show gpon onu state gpon_olt-1/2/1</div>
                 <div class="command-description">// 查看PON口下onu详细运行状态</div>
