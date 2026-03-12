@@ -137,7 +137,20 @@
                 <div style="margin-top: 8px; color: #0066cc;">show running-config-interface vport-1/3/6.2:1</div>
                 <div class="command-description">// 查看ONU业务流配置以及组播接收端口配置</div>
             </div>
-            
+
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">取消ONU设备端口隔离</div>
+                <div style="margin-top: 8px; color: #0066cc;">eth-switch  port-protecet   disable</div>
+                <div class="command-description">// 常见的是在多网口设备中比如F822，默认端口之间是相互独立的，可能导致打印机连接不上，取消隔离即可</div>
+            </div>
+
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">替换ONU的sn号在config-if模式下</div>
+                <div style="margin-top: 8px; color: #0066cc;"> (config-if)</div>
+                <div style="margin-top: 8px; color: #0066cc;">registration-method sn</div>
+                <div class="command-description">// 常见的是设备坏了，数据不变只换终端设备的sn号替换即可</div>
+            </div>
+           
             <div class="command-item">
                 <div style="color: #333; font-weight: bold;">同OLT内，PON之间的业务割接场景很常见，涉及pon-copy命令</div>
                 <div style="margin-top: 8px; color: #0066cc;">1)设置源PON口模式为mode1</div>
