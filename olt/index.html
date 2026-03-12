@@ -95,6 +95,12 @@
             <h2>OLT上联和PON相关查询命令</h2>
 
             <div class="command-item">
+                <div style="color: #333; font-weight: bold;">删除OLT子框内板卡X槽位</div>
+                <div style="margin-top: 8px; color: #0066cc;"> del-card  rackno 1 shelfno 1 slotno X </div>
+                <div class="command-description">// 在config模式下，添加板卡命令是add-caed </div>
+            </div>   
+            
+            <div class="command-item">
                 <div style="color: #333; font-weight: bold;">查看上联聚合组配置</div>
                 <div style="margin-top: 8px; color: #0066cc;"> show running-config-interface smartgroup1</div>
                 <div class="command-description">// show lacp internal 用于查看上联端口聚合</div>
@@ -107,6 +113,13 @@
                 <div class="command-description">// 查看上联口数据包统计，判断有无流量</div>
             </div>
 
+            <div class="command-item">
+                <div style="color: #333; font-weight: bold;">上联误码清除</div>
+                <div style="margin-top: 8px; color: #0066cc;">interface xgei-1/11/1</div>
+                <div style="margin-top: 8px; color: #0066cc;">perf-clear-current</div>
+                <div class="command-description">// 线路质量不好时产生误码，清除便于查看是否恢复</div>
+            </div>
+          
             <div class="command-item">
                 <div style="color: #333; font-weight: bold;">查看某ONU数据包统计</div>
                 <div style="margin-top: 8px; color: #0066cc;">show interface gpon_onu-1/X/X:X</div>
