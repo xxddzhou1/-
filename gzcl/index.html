@@ -107,6 +107,19 @@
                <div class="note">
           <strong>💡 提示：</strong> 注：只有同一台OLT开的设备出现语音单通有用，不是同一台olt做这个没用
               </div>
+
+             <div class="command-item">
+                <div style="color: #333; font-weight: bold;">替换ONU的sn号在config-if模式下</div>
+                <div style="margin-top: 8px; color: #0066cc;"> (config-if)</div>
+                <div style="margin-top: 8px; color: #0066cc;">registration-method sn</div>
+                <div class="command-description">// 常见的是设备坏了，数据不变只换终端设备的sn号替换即可</div>
+            </div>
+
+                <div class="command-item">
+                <div style="color: #333; font-weight: bold;">查看PON口下光猫离线记录次数</div>
+                <div style="margin-top: 8px; color: #0066cc;">show pon onu offline information  gpon_olt-1/1/1 </div>
+                <div class="command-description">// 通常用于判断劣化光路的临界值光衰用户</div>
+            </div>
     </div>
 </body>
 </html>
