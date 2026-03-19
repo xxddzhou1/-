@@ -145,12 +145,12 @@
             </div>
 
             <div class="command-item">
-                <div style="color: #333; font-weight: bold;">替换ONU的sn号在config-if模式下</div>
-                <div style="margin-top: 8px; color: #0066cc;"> (config-if)</div>
-                <div style="margin-top: 8px; color: #0066cc;">registration-method sn</div>
-                <div class="command-description">// 常见的是设备坏了，数据不变只换终端设备的sn号替换即可</div>
+                <div style="color: #333; font-weight: bold;">重启PON口下的ONU设备</div>
+                <div style="margin-top: 8px; color: #0066cc;">interface gpon_olt-1/1/1 disable </div>
+                <div style="margin-top: 8px; color: #0066cc;">onu-action omci-reboot</div>
+                <div class="command-description">// 在全局模式下重启1/1/1口下面ONU设备</div>
             </div>
-           
+            
             <div class="command-item">
                 <div style="color: #333; font-weight: bold;">同OLT内，PON之间的业务割接场景很常见，涉及pon-copy命令</div>
                 <div style="margin-top: 8px; color: #0066cc;">1)设置源PON口模式为mode1</div>
