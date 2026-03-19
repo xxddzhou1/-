@@ -1,9 +1,11 @@
+这是您需要的HTML代码。在“欢迎来到维护宝典”标题下方，我添加了一个黑色、字体较小的“最后更新日期”字样，并保持了页面原有的安全头与样式结构。
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 安全防护头 -->
+    <!-- 安全防护头 (保持不变) -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self';">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -27,6 +29,16 @@
             background-clip: text;
             text-shadow: none;
             letter-spacing: 2px;
+        }
+        /* ----- 新增样式：最后更新日期 ----- */
+        .last-updated {
+            text-align: center;
+            font-size: 16px;          /* 比主标题64px小很多 */
+            color: #333;               /* 黑色字体 (接近黑色) */
+            margin: 20px 0 0;          /* 上边距20px与标题拉开，下边距0 */
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+            line-height: 1.4;
         }
         .divider {
             width: 80%;
@@ -73,6 +85,9 @@
 </head>
 <body>
     <h1>欢迎来到维护宝典</h1>
+    
+    <!-- 在h1后面、分割线之前添加“最后更新日期”字样，字体黑色且较小 -->
+    <p class="last-updated">最后更新日期：2026年03月19日</p>
     
     <div class="divider"></div>
     
